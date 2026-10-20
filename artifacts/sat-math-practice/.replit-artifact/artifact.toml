@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "SAT Math Practice"
+description = "An Android SAT math practice app with original questions, timed test modules, topic practice, answer review, optional Arabic labels, and locally saved progress."
+version = "1.0.0"
+id = "artifacts/sat-math-practice"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 24652
+
+[services.development]
+run = "pnpm --filter @workspace/sat-math-practice run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sat-math-practice", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/sat-math-practice", "run", "serve" ]
+
+[services.env]
+PORT = "24652"
+BASE_PATH = "/"
