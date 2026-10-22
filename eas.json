@@ -16,7 +16,14 @@
         "NPM_CONFIG_FROZEN_LOCKFILE": "false"
       }
     },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "NPM_CONFIG_FROZEN_LOCKFILE": "false"
+      }
+    }
   },
   "submit": {
     "production": {}
